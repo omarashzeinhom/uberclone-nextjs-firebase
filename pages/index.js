@@ -5,6 +5,7 @@ import { useEffect } from "react";
 
 import tw from "tailwind-styled-components";
 import mapboxgl from '!mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
+import MapComp from "../components/MapComp";
 
 
  
@@ -12,31 +13,12 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoib21hcmFzaHplaW5ob20iLCJhIjoiY2w0YndzY2pjMWF1b
 
 
 
-;
-
-
-
 export default function Home() {
 
-  useEffect(() => {
-    const map = new mapboxgl.Map({
-      container: "map",
-      style: 'mapbox://styles/omarashzeinhom/cl4k5qsqz000z14s7wqbpzlqv',
-      center: [26.8206, 30.8025],
-      zoom: 3,
-    })
-  
- 
-    });
- /**
-  *  var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11'
-    });
-  */
+
   return (
     <Wrapper>
-      <Map id="map">Map</Map>
+      <Map id="map"><MapComp/></Map>
       <ActionItems>Start</ActionItems>
     </Wrapper>
   );
