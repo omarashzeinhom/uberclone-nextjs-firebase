@@ -41,10 +41,26 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 npm install -D tailwindcss postcss autoprefixer
 
 npx tailwindcss init -p
+
 ```
 
 2. [tailwind-styled-components](https://www.npmjs.com/package/tailwind-styled-components)
+
 ```
 //required to install tailwind css first
 npm i -D tailwind-styled-components
+
+```
+
+
+3. [Add the Mapbox GL JS module](https://www.mapbox.com/install/js/bundler-install/)
+
+```
+npm install mapbox-gl --save
+
+// & add 
+//  mapbox-gl in _app.js
+import "mapbox-gl/dist/mapbox-gl.css"
+
+// Include the GL JS CSS file in the <head> of your HTML file.
 ```
