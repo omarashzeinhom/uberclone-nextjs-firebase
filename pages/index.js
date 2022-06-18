@@ -18,7 +18,13 @@ export default function Home() {
       <Map id="map"><MapComp/></Map>
       <ActionItems>
       {/**Header */}
-      <Header>WUBER</Header>
+      <Header>
+      <img
+      src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655577502/FIXITAPP/nextjs-app-images/header/fix__it__header__logo_daikqr.svg"
+      />
+        Profile
+
+      </Header>
       {/**Action Btns */}
       {/** */}
 
