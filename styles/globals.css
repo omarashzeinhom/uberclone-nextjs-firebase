@@ -1,4 +1,6 @@
-/**/
+/*Important tailwind directives 
+https://tailwindcss.com/docs/guides/nextjs
+*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

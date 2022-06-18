@@ -8,8 +8,8 @@ export default function Home() {
       <div className={styles.map}>Map </div>
       <div className={styles.start}>Start section</div>
       <h1 className="text-sky-400 text-3xl font-bold underline">
-      Hello world!
-    </h1>
+        Hello world!
+      </h1>
     </div>
   );
 }
