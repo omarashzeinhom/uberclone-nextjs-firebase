@@ -47,7 +47,7 @@ bg-gray-400 flex-1
 `;
 
 const Header = tw.div`
-font-white-500
+flex
 `;
 
 const FixitLogo = tw.img`
@@ -55,6 +55,7 @@ max-w-full h-auto transition-shadow rounded-sm
 `;
 
 const Profile = tw.div`
+flex
 `;
 
 const Name = tw.div``;
