@@ -10,7 +10,8 @@ const MapComp = () => {
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: "map",
-      style: "mapbox://styles/omarashzeinhom/cl4k5qsqz000z14s7wqbpzlqv",
+      style:
+        "mapbox://styles/omarashzeinhom/cl4k5qsqz000z14s7wqbpzlqv?optimize=true",
       center: [26.8206, 30.8025],
       zoom: 3,
     });
