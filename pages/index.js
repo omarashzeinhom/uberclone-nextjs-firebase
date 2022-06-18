@@ -21,7 +21,7 @@ export default function Home() {
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: "map",
-      style: 'mapbox://styles/mapbox/streets-v11',
+      style: 'mapbox://styles/omarashzeinhom/cl4k5qsqz000z14s7wqbpzlqv',
       center: [26.8206, 30.8025],
       zoom: 3,
     })
