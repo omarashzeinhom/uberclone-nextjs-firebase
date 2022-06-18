@@ -5,11 +5,8 @@ import { useEffect } from "react";
 
 import tw from "tailwind-styled-components";
 import mapboxgl from '!mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
-import MapComp from "../components/MapComp";
+import MapComp from "../components/Map/MapComp";
 
-
- 
-mapboxgl.accessToken = 'pk.eyJ1Ijoib21hcmFzaHplaW5ob20iLCJhIjoiY2w0YndzY2pjMWF1bjNjcnlqbDI1OW56YSJ9.kfQVlZWIi3vTQoPvBB8SUw';
 
 
 
@@ -19,7 +16,13 @@ export default function Home() {
   return (
     <Wrapper>
       <Map id="map"><MapComp/></Map>
-      <ActionItems>Start</ActionItems>
+      <ActionItems>
+      {/**Header */}
+      <Header>WUBER</Header>
+      {/**Action Btns */}
+      {/** */}
+
+      </ActionItems>
     </Wrapper>
   );
 }
@@ -35,4 +38,9 @@ bg-sky-700 h-screen flex-1
 
 const Map = tw.div`
 bg-gray-400 flex-1
+`;
+
+
+const Header = tw.div`
+font-white-500
 `;
