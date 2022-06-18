@@ -23,9 +23,7 @@ export default function Home() {
           />
           <Profile>
             <Name>Omar AbdELRahman</Name>
-            <UserImg
-            src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655579775/FIXITAPP/nextjs-app-images/header/pp_home_removedbg_g5eq7r_hp8ikc.webp"
-            />
+            <UserImg src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655579775/FIXITAPP/nextjs-app-images/header/pp_home_removedbg_g5eq7r_hp8ikc.webp" />
           </Profile>
         </Header>
         {/**Action Btns */}
