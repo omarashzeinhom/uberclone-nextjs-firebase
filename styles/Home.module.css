@@ -1,6 +1,36 @@
 .container {
   padding: 0 2rem;
+  /**/
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
 }
+
+
+.map{
+  background-color: gray;
+  flex: 1;
+}
+
+
+.start{
+ background-color: green;
+ /*importance of container since they have the same weight in map they go 50% */
+ flex: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .main {
   min-height: 100vh;
