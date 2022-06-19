@@ -4,7 +4,7 @@ import MapComp from "../components/Map/MapComp";
 import { useEffect } from "react";
 
 const Confirm = () => {
-  //get Coordinates
+  //get PickupCoordinates Start
   const getPickUpCoordiantes = () => {
     const location = "Cairo";
     // Fetch Function
@@ -22,16 +22,14 @@ const Confirm = () => {
       });
   };
 
-  //get Coordinates end
+  //get PickupCoordinates end
 
-  // get DropOffCoordinates
-
-  //get Coordinates
+  // get DropOffCoordinates Start
   const getDropOffCoordiantes = () => {
-    const location = "Cairo";
+    const dropoff = "Alexandria";
     // Fetch Function
     fetch(
-      `https://api.mapbox.com/geocoding/v5/mapbox.places/${location}.json?` +
+      `https://api.mapbox.com/geocoding/v5/mapbox.places/${dropoff}.json?` +
         new URLSearchParams({
           access_token:
             "pk.eyJ1Ijoib21hcmFzaHplaW5ob20iLCJhIjoiY2w0YndzY2pjMWF1bjNjcnlqbDI1OW56YSJ9.kfQVlZWIi3vTQoPvBB8SUw",
@@ -43,10 +41,12 @@ const Confirm = () => {
         console.log(data.features[0].center);
       });
   };
+  // get DropOffCoordinates End
 
-  //call function with useEffect
+  //call functions with useEffect
   useEffect(() => {
     getPickUpCoordiantes();
+    getDropOffCoordiantes();
   }, []);
 
   return (
