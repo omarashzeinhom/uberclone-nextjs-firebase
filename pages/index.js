@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { useEffect } from "react";
+import Link from "next/link";
 
 import tw from "tailwind-styled-components";
 import mapboxgl from "!mapbox-gl"; // or "const mapboxgl = require('mapbox-gl');"
@@ -41,12 +42,9 @@ export default function Home() {
             <ActionButtonImage src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655623254/FIXITAPP/nextjs-app-images/ActionButtonImages/clock-svgrepo-com_b913bl.svg" />
             <h5>Reserve </h5>
           </ActionButton>
-
-<InputButton>Where to?</InputButton>
-
-
         </ActionButtons>
         {/** */}
+        <InputButton>Where to?</InputButton>
       </ActionItems>
     </Wrapper>
   );
@@ -58,7 +56,7 @@ flex flex-col bg-white-500 h-screen text-center
 `;
 
 const ActionItems = tw.div`
-bg-sky-700  flex-1 p-4
+bg-white  flex-1 p-4
 `;
 
 const Map = tw.div`
@@ -82,7 +80,7 @@ mr-5 w-20 text-sm
 `;
 
 const UserImg = tw.img`
-rounded-full w-32 h-20 border border-gray-200 bg-stone-500/75 hover:bg-stone-600 p-px
+rounded-full w-15 h-12 mb-4 border border-gray-200 bg-stone-500/75 hover:bg-stone-600 p-px
 `;
 
 const ActionButtons = tw.div`
@@ -90,10 +88,9 @@ flex
 `;
 
 const ActionButton = tw.div`
-bg-gray-400 rounded flex-1 m-1 h-32 w-32 items-center flex-col justify-center transform hover:scale-105 transition text-xl`;
+flex flex-1  flex-col  rounded-lg bg-gray-400  m-3 h-32 items-center  justify-center transform hover:scale-105 transition text-xl`;
 
-const ActionButtonImage = tw.img`w-full h-3/5`;
-
+const ActionButtonImage = tw.img` h-3/5`;
 
 const InputButton = tw.div`
 
