@@ -1,9 +1,19 @@
 import React from "react";
 import tw from "tailwind-styled-components/dist/tailwind";
 import MapComp from "../components/Map/MapComp";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Confirm = () => {
+
+    const [pickupCoordinates , setPickupCoordinates]= useState("");
+    const [dropOffCoordinates , setDropOffCoordinates]= useState("");
+
+
+
+
+
+
+
   //get PickupCoordinates Start
   const getPickUpCoordiantes = () => {
     const location = "Cairo";
