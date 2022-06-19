@@ -4,15 +4,8 @@ import MapComp from "../components/Map/MapComp";
 import { useEffect, useState } from "react";
 
 const Confirm = () => {
-
-    const [pickupCoordinates , setPickupCoordinates]= useState("");
-    const [dropOffCoordinates , setDropOffCoordinates]= useState("");
-
-
-
-
-
-
+  const [pickupCoordinates, setPickupCoordinates] = useState("");
+  const [dropOffCoordinates, setDropOffCoordinates] = useState("");
 
   //get PickupCoordinates Start
   const getPickUpCoordiantes = () => {
@@ -28,7 +21,7 @@ const Confirm = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log("Pick Up Coordinates:" + data.features[0].center);
+        setPickupCoordinates("Pick Up Coordinates:" + data.features[0].center);
       });
   };
 
@@ -48,7 +41,9 @@ const Confirm = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log("Drop Off Coordinates:" + data.features[0].center);
+        setDropOffCoordinates(
+          "Drop Off Coordinates:" + data.features[0].center
+        );
       });
   };
   // get DropOffCoordinates End
