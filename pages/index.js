@@ -29,8 +29,22 @@ export default function Home() {
         </Header>
         {/**Action Btns */}
         <ActionButtons>
-          <ActionButton><ActionButtonImage src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655585748/FIXITAPP/nextjs-app-images/ActionButtonImages/woker-avatar-male_mieyjc.svg"/><h5>Male Worker</h5></ActionButton>
-          <ActionButton><ActionButtonImage src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655585697/FIXITAPP/nextjs-app-images/ActionButtonImages/worker-tool-search_au8m9f.svg"/><h5>Profession </h5></ActionButton>
+          <ActionButton>
+            <ActionButtonImage src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655585748/FIXITAPP/nextjs-app-images/ActionButtonImages/woker-avatar-male_mieyjc.svg" />
+            <h5> Worker</h5>
+          </ActionButton>
+          <ActionButton>
+            <ActionButtonImage src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655585697/FIXITAPP/nextjs-app-images/ActionButtonImages/worker-tool-search_au8m9f.svg" />
+            <h5>Profession </h5>
+          </ActionButton>
+          <ActionButton>
+            <ActionButtonImage src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655623254/FIXITAPP/nextjs-app-images/ActionButtonImages/clock-svgrepo-com_b913bl.svg" />
+            <h5>Reserve </h5>
+          </ActionButton>
+
+<InputButton>Where to?</InputButton>
+
+
         </ActionButtons>
         {/** */}
       </ActionItems>
@@ -76,7 +90,12 @@ flex
 `;
 
 const ActionButton = tw.div`
-bg-gray-400 rounded-full flex-1 m-1 h-32 w-32 items-center`;
-
+bg-gray-400 rounded flex-1 m-1 h-32 w-32 items-center flex-col justify-center transform hover:scale-105 transition text-xl`;
 
 const ActionButtonImage = tw.img`w-full h-3/5`;
+
+
+const InputButton = tw.div`
+
+h-20 bg-gray-200 p-4 rounded text-2x1 flex items-center mt-8
+`;
