@@ -64,3 +64,7 @@ import "mapbox-gl/dist/mapbox-gl.css"
 
 // Include the GL JS CSS file in the <head> of your HTML file.
 ```
+
+## References 
+
+1. [Markers and controls Map Box](https://docs.mapbox.com/mapbox-gl-js/api/markers/#marker)

@@ -17,6 +17,19 @@ const MapComp = () => {
     });
   });
 
+
+  const addToMap = (map) => {
+    // Set marker options.
+    const marker = new mapboxgl.Marker({
+      color: "#568203",
+      draggable: true,
+    })
+      .setLngLat([26.8206, 30.8025])
+      .addTo(map);
+}
+
+
+
   return <Wrapper id="map"></Wrapper>;
 };
 
