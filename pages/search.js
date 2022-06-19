@@ -23,6 +23,7 @@ const search = () => {
           <Input placeholder="Your Home Address " />
           <Input placeholder="Workers Address" />
         </InputBoxes>
+        <PlusIcon src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655629896/FIXITAPP/nextjs-app-images/search/add-circle-outline_t5ofgb.svg" />
       </InputContainer>
       {/**Saved Places */}
       {/**Confirm Location */}
@@ -44,7 +45,7 @@ const BackButton = tw.img`
  w-12 h-12 rounded-full`;
 
 const InputContainer = tw.div`
-bg-white
+bg-white flex items-center px-4 mb-2
 
 `;
 
@@ -54,8 +55,12 @@ const Circle = tw.img`h-5 w-5`;
 
 const Line = tw.img`h-12 w-5`;
 
-const InputBoxes = tw.div` flex flex-col flex-1`;
+const InputBoxes = tw.div`flex flex-col flex-1`;
 
 const Input = tw.input`
 h-20 bg-gray-200 p-2 my-2 rounded text-2x1 flex items-center rounded-2 outline-none border-none
+`;
+
+const PlusIcon = tw.img`
+w-10 h-10 bg-gray-300 rounded-full ml-3 
 `;
