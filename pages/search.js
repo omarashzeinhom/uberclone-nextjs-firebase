@@ -13,10 +13,13 @@ const search = () => {
         </Link>
       </ButtonContainer>
       {/**Input Container */}
+      <InputContainer>
+      <FromToIcons></FromToIcons>
+        <InputButton>Where to?</InputButton>
+        <InputButton>Where to?</InputButton>
+      </InputContainer>
       {/**Saved Places */}
       {/**Confirm Location */}
-      <InputButton>Where to?</InputButton>
-      <InputButton>Where to?</InputButton>
     </Wrapper>
   );
 };
@@ -31,9 +34,15 @@ const ButtonContainer = tw.div`
 bg-white px-4
 `;
 
-const BackButton = tw.img` w-12 h-12 rounded-full`;
+const BackButton = tw.img`
+ w-12 h-12 rounded-full`;
+
+const InputContainer = tw.div`
+
+`;
+
+const FromToIcons = tw.img``;
 
 const InputButton = tw.div`
-
 h-20 bg-gray-200 p-4 rounded text-2x1 flex items-center mt-8
 `;
