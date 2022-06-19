@@ -5,10 +5,12 @@ import { useEffect } from "react";
 
 const Confirm = () => {
   const getCoordiantes = () => {
+    const access_token =
+      "access_token=pk.eyJ1Ijoib21hcmFzaHplaW5ob20iLCJhIjoiY2w0YndzY2pjMWF1bjNjcnlqbDI1OW56YSJ9.kfQVlZWIi3vTQoPvBB8SUw";
     const location = "Cairo";
     // Fetch Function
     fetch(
-      `https://api.mapbox.com/geocoding/v5/mapbox.places/${location}.json?access_token=pk.eyJ1Ijoib21hcmFzaHplaW5ob20iLCJhIjoiY2w0YndzY2pjMWF1bjNjcnlqbDI1OW56YSJ9.kfQVlZWIi3vTQoPvBB8SUw`
+      `https://api.mapbox.com/geocoding/v5/mapbox.places/${location}.json?${access_token}`
     )
       .then((response) => response.json())
       .then((data) => {
