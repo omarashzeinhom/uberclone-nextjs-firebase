@@ -1,11 +1,11 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
 //tailwind-css
-import 'tailwindcss/tailwind.css'
+import "tailwindcss/tailwind.css";
 //  mapbox-gl
-import "mapbox-gl/dist/mapbox-gl.css"
+import "mapbox-gl/dist/mapbox-gl.css";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default MyApp;
