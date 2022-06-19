@@ -37,17 +37,24 @@ export default function Home() {
             </ActionButton>
           </Link>
 
-          <ActionButton>
-            <ActionButtonImage src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655585697/FIXITAPP/nextjs-app-images/ActionButtonImages/worker-tool-search_au8m9f.svg" />
-            <h5>Profession </h5>
-          </ActionButton>
-          <ActionButton>
-            <ActionButtonImage src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655623254/FIXITAPP/nextjs-app-images/ActionButtonImages/clock-svgrepo-com_b913bl.svg" />
-            <h5>Reserve </h5>
-          </ActionButton>
+          <Link href="/search">
+            <ActionButton>
+              <ActionButtonImage src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655585697/FIXITAPP/nextjs-app-images/ActionButtonImages/worker-tool-search_au8m9f.svg" />
+              <h5>Profession </h5>
+            </ActionButton>
+          </Link>
+
+          <Link href="/search">
+            <ActionButton>
+              <ActionButtonImage src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655623254/FIXITAPP/nextjs-app-images/ActionButtonImages/clock-svgrepo-com_b913bl.svg" />
+              <h5>Reserve </h5>
+            </ActionButton>
+          </Link>
         </ActionButtons>
         {/** */}
-        <InputButton>Where to?</InputButton>
+        <Link href="/search">
+          <InputButton>Where to?</InputButton>
+        </Link>
       </ActionItems>
     </Wrapper>
   );
@@ -97,5 +104,5 @@ const ActionButtonImage = tw.img` h-3/5`;
 
 const InputButton = tw.div`
 
-h-20 bg-gray-200 p-4 rounded text-2x1 flex items-center mt-8
+h-20 bg-gray-200 p-4 rounded text-2x1 flex items-center mt-8 cursor-pointer
 `;
