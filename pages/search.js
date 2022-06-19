@@ -31,9 +31,7 @@ const search = () => {
         Saved Places
       </SavedPlaces>
       {/**Confirm Location */}
-      <ConfirmButtonContainer>
-Confirm Locations
-      </ConfirmButtonContainer>
+      <ConfirmButtonContainer>Confirm Locations</ConfirmButtonContainer>
     </Wrapper>
   );
 };
@@ -72,8 +70,8 @@ const PlusIcon = tw.img`
 w-10 h-10 bg-gray-300 rounded-full ml-3 
 `;
 
-const SavedPlaces = tw.div` flex items-center px-4 bg-gray-300 rounded`;
+const SavedPlaces = tw.div` flex items-center px-4 bg-white rounded`;
 
 const StarIcon = tw.img`h-12 w-12 rounded mr-2`;
 
-const ConfirmButtonContainer = tw.div`bg-black text-white text-center`;
+const ConfirmButtonContainer = tw.div`bg-black text-white text-center mt-2 mx-4 py-3 rounded text-2xl cursor-pointer`;
