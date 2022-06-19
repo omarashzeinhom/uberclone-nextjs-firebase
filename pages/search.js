@@ -14,19 +14,15 @@ const search = () => {
       </ButtonContainer>
       {/**Input Container */}
       <InputContainer>
-      <FromToIcons>
-<Circle src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655632851/FIXITAPP/nextjs-app-images/search/checkbox-blank-circle-line_uauwe2.svg"/>
-<Line src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655633562/FIXITAPP/nextjs-app-images/search/1539792897_qyla5f.svg"/>
-<Circle src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655632849/FIXITAPP/nextjs-app-images/search/checkbox-blank-circle-line_1_xub199.svg"/>
-
-
-      </FromToIcons>
-      <InputBoxes>
-      
-      <InputButton>Where to?</InputButton>
-        <InputButton>Where to?</InputButton>
-      </InputBoxes>
-      
+        <FromToIcons>
+          <Circle src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655632851/FIXITAPP/nextjs-app-images/search/checkbox-blank-circle-line_uauwe2.svg" />
+          <Line src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655633562/FIXITAPP/nextjs-app-images/search/1539792897_qyla5f.svg" />
+          <Circle src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655632849/FIXITAPP/nextjs-app-images/search/checkbox-blank-circle-line_1_xub199.svg" />
+        </FromToIcons>
+        <InputBoxes>
+          <Input placeholder="Your Home Address " />
+          <Input placeholder="Workers Address" />
+        </InputBoxes>
       </InputContainer>
       {/**Saved Places */}
       {/**Confirm Location */}
@@ -58,9 +54,8 @@ const Circle = tw.img`h-5 w-5`;
 
 const Line = tw.img`h-12 w-5`;
 
-const InputBoxes = tw.div``;
+const InputBoxes = tw.div` flex flex-col flex-1`;
 
-const InputButton = tw.div`
-h-20 bg-gray-200 p-4 rounded text-2x1 flex items-center mt-8
+const Input = tw.input`
+h-20 bg-gray-200 p-2 my-2 rounded text-2x1 flex items-center rounded-2 outline-none border-none
 `;
-
