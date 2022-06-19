@@ -31,7 +31,11 @@ const search = () => {
         Saved Places
       </SavedPlaces>
       {/**Confirm Location */}
-      <ConfirmButtonContainer>Confirm Locations</ConfirmButtonContainer>
+
+      <ConfirmButtonContainer>
+        <Link href="/confirm">
+        Confirm Locations
+        </Link></ConfirmButtonContainer>
     </Wrapper>
   );
 };
