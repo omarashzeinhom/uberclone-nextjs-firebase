@@ -30,10 +30,13 @@ export default function Home() {
         </Header>
         {/**Action Btns */}
         <ActionButtons>
-          <ActionButton>
-            <ActionButtonImage src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655585748/FIXITAPP/nextjs-app-images/ActionButtonImages/woker-avatar-male_mieyjc.svg" />
-            <h5> Worker</h5>
-          </ActionButton>
+          <Link href="/search">
+            <ActionButton>
+              <ActionButtonImage src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655585748/FIXITAPP/nextjs-app-images/ActionButtonImages/woker-avatar-male_mieyjc.svg" />
+              <h5> Worker</h5>
+            </ActionButton>
+          </Link>
+
           <ActionButton>
             <ActionButtonImage src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655585697/FIXITAPP/nextjs-app-images/ActionButtonImages/worker-tool-search_au8m9f.svg" />
             <h5>Profession </h5>
