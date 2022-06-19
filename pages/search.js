@@ -21,11 +21,14 @@ const search = () => {
         </FromToIcons>
         <InputBoxes>
           <Input placeholder="Your Home Address " />
-          <Input placeholder="Workers Address" />
+          <Input placeholder="Workers Nearest Locations" />
         </InputBoxes>
         <PlusIcon src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655629896/FIXITAPP/nextjs-app-images/search/add-circle-outline_t5ofgb.svg" />
       </InputContainer>
       {/**Saved Places */}
+      <SavedPlaces>
+        <StarIcon src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655637058/FIXITAPP/nextjs-app-images/search/rodentia-icons_software-installer-new_hosdk1.svg" />
+      </SavedPlaces>
       {/**Confirm Location */}
     </Wrapper>
   );
@@ -64,3 +67,7 @@ h-20 bg-gray-200 p-2 my-2 rounded text-2x1 flex items-center rounded-2 outline-n
 const PlusIcon = tw.img`
 w-10 h-10 bg-gray-300 rounded-full ml-3 
 `;
+
+const SavedPlaces = tw.div` flex items-center`;
+
+const StarIcon = tw.img`h-12 w-12`;
