@@ -46,7 +46,7 @@ bg-gray-100 px-4
 `;
 
 const BackButton = tw.img`
- w-12 h-12 rounded-full`;
+ w-12 h-12 rounded-full cursor-pointer`;
 
 const InputContainer = tw.div`
 bg-white flex items-center px-4 mb-2

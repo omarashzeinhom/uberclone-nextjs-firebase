@@ -87,7 +87,7 @@ rounded-full w-15 h-12 mb-4 border border-gray-200 bg-stone-500/75 hover:bg-ston
 `;
 
 const ActionButtons = tw.div`
-flex
+flex cursor-pointer
 `;
 
 const ActionButton = tw.div`
