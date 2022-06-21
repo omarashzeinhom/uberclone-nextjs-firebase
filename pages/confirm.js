@@ -60,7 +60,7 @@ const Confirm = () => {
       <ConfirmHeader>
         <h1>Confirm </h1>
       </ConfirmHeader>
-      <Link href="/">
+      <Link href="/search">
         <BackButton src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655630172/FIXITAPP/nextjs-app-images/search/back-svgrepo-com_s3toio.svg" />
       </Link>
       <MapComp

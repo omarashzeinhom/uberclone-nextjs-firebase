@@ -33,9 +33,18 @@ const search = () => {
       {/**Confirm Location */}
 
       <ConfirmButtonContainer>
-        <Link href="/confirm">
-        Confirm Locations
-        </Link></ConfirmButtonContainer>
+        <Link
+          href={{
+            pathname: "/confirm",
+            query: {
+              pickup: "Cairo",
+              dropoff: "Alexandria",
+            },
+          }}
+        >
+          Confirm Locations
+        </Link>
+      </ConfirmButtonContainer>
     </Wrapper>
   );
 };
