@@ -63,8 +63,8 @@ const Confirm = () => {
 
   //call functions with useEffect
   useEffect(() => {
-    getPickUpCoordiantes();
-    getDropOffCoordiantes();
+    getPickUpCoordiantes(pickup);
+    getDropOffCoordiantes(dropoff);
   }, []);
   //
   return (
@@ -79,11 +79,12 @@ const Confirm = () => {
         pickupCoordinates={pickupCoordinates}
         dropOffCoordinates={dropOffCoordinates}
       />
-      <RideContainer>
+      <WorkerContainer>
         {/**Ride Selector */}
-
+        Worker Selector
         {/**Confirm Buttons */}
-      </RideContainer>
+        Confirm Buttons
+      </WorkerContainer>
     </Wrapper>
   );
 };
@@ -94,7 +95,7 @@ const Wrapper = tw.div`
 flex flex-col h-screen  
 `;
 
-const RideContainer = tw.div`flex-1`;
+const WorkerContainer = tw.div`flex-1`;
 
 const BackButton = tw.img`
  w-12 h-12 rounded-full cursor-pointer`;
