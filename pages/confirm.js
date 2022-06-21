@@ -16,11 +16,8 @@ const Confirm = () => {
   const [pickupCoordinates, setPickupCoordinates] = useState("");
   const [dropOffCoordinates, setDropOffCoordinates] = useState("");
 
-  console.log("PickUp:",pickup);
+  console.log("PickUp:", pickup);
   console.log("DropOff:", dropoff);
-
-
-
 
   //get PickupCoordinates Start
   const getPickUpCoordiantes = () => {
