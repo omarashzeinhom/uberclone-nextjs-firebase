@@ -11,8 +11,8 @@ const Confirm = () => {
   const router = useRouter();
   const { pickup, dropoff } = router.query;
   // debug pickup and drop off
-  console.log("PickUp:", pickup);
-  console.log("DropOff:", dropoff);
+  //console.log("PickUp:", pickup);
+  //console.log("DropOff:", dropoff);
 
   //useState
   const [pickupCoordinates, setPickupCoordinates] = useState("");
@@ -76,10 +76,14 @@ const Confirm = () => {
         dropOffCoordinates={dropOffCoordinates}
       />
       <WorkerContainer>
-        {/**Ride Selector */}
+        {/**Worker Selector */}
         Worker Selector
+        <WorkerSelector>
+          <ConfirmButtonContainer>
+            Confirm Worker Reservation
+          </ConfirmButtonContainer>
+        </WorkerSelector>
         {/**Confirm Buttons */}
-        Confirm Buttons
       </WorkerContainer>
     </Wrapper>
   );
@@ -92,8 +96,11 @@ flex flex-col h-screen
 `;
 
 const WorkerContainer = tw.div`flex-1`;
+const WorkerSelector = tw.div``;
 
 const BackButton = tw.img`
  w-12 h-12 rounded-full cursor-pointer`;
 
 const ConfirmHeader = tw.div`text-center text-xl`;
+
+const ConfirmButtonContainer = tw.div``;
