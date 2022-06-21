@@ -2,10 +2,11 @@ import React from "react";
 import tw from "tailwind-styled-components/dist/tailwind";
 import MapComp from "../components/Map/MapComp";
 import { useEffect, useState } from "react";
-//
+//imports for built in functions from next
 import Link from "next/link";
 import { useRouter } from "next/router";
-
+//
+import WorkerSelector from "../components/WorkerSelector/WorkerSelector";
 const Confirm = () => {
   //router built in function from next/router
   const router = useRouter();
@@ -76,13 +77,11 @@ const Confirm = () => {
         dropOffCoordinates={dropOffCoordinates}
       />
       <WorkerContainer>
-        {/**Worker Selector */}
-        Worker Selector
-        <WorkerSelector>
-          <ConfirmButtonContainer>
-            Confirm Worker Reservation
-          </ConfirmButtonContainer>
-        </WorkerSelector>
+        {/**Worker Selector Component */}
+        <WorkerSelector />
+        <ConfirmButtonContainer>
+          Confirm Worker Reservation
+        </ConfirmButtonContainer>
         {/**Confirm Buttons */}
       </WorkerContainer>
     </Wrapper>
@@ -95,12 +94,11 @@ const Wrapper = tw.div`
 flex flex-col h-screen  
 `;
 
-const WorkerContainer = tw.div`flex-1`;
-const WorkerSelector = tw.div``;
+const WorkerContainer = tw.div`flex flex-col flex-1 `;
 
 const BackButton = tw.img`
  w-12 h-12 rounded-full cursor-pointer`;
 
 const ConfirmHeader = tw.div`text-center text-xl`;
 
-const ConfirmButtonContainer = tw.div``;
+const ConfirmButtonContainer = tw.div` my-4 mx-4 py-4 text-center rounded bg-emerald-400 `;
