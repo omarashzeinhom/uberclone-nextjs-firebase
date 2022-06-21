@@ -5,8 +5,8 @@ import tw from "tailwind-styled-components";
 mapboxgl.accessToken =
   "pk.eyJ1Ijoib21hcmFzaHplaW5ob20iLCJhIjoiY2w0YndzY2pjMWF1bjNjcnlqbDI1OW56YSJ9.kfQVlZWIi3vTQoPvBB8SUw";
 
-const MapComp = () => {
-
+const MapComp = (props) => {
+console.log(props);
   const addToMap = (map) => {
     // Set marker options.
     const marker = new mapboxgl.Marker({
