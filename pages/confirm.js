@@ -19,11 +19,10 @@ const Confirm = () => {
   const [dropOffCoordinates, setDropOffCoordinates] = useState("");
 
   //get PickupCoordinates Start
-  const getPickUpCoordiantes = () => {
-    const location = "Cairo";
+  const getPickUpCoordiantes = (pickup) => {
     // Fetch Function
     fetch(
-      `https://api.mapbox.com/geocoding/v5/mapbox.places/${location}.json?` +
+      `https://api.mapbox.com/geocoding/v5/mapbox.places/${pickup}.json?` +
         new URLSearchParams({
           access_token:
             "pk.eyJ1Ijoib21hcmFzaHplaW5ob20iLCJhIjoiY2w0YndzY2pjMWF1bjNjcnlqbDI1OW56YSJ9.kfQVlZWIi3vTQoPvBB8SUw",
@@ -41,8 +40,7 @@ const Confirm = () => {
   //get PickupCoordinates end
 
   // get DropOffCoordinates Start
-  const getDropOffCoordiantes = () => {
-    const dropoff = "Alexandria";
+  const getDropOffCoordiantes = (dropoff) => {
     // Fetch Function
     fetch(
       `https://api.mapbox.com/geocoding/v5/mapbox.places/${dropoff}.json?` +
@@ -63,7 +61,7 @@ const Confirm = () => {
   useEffect(() => {
     getPickUpCoordiantes(pickup);
     getDropOffCoordiantes(dropoff);
-  }, []);
+  }, [pickup, dropoff]);
   //
   return (
     <Wrapper>
