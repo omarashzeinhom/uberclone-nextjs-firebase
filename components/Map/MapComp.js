@@ -6,18 +6,8 @@ mapboxgl.accessToken =
   "pk.eyJ1Ijoib21hcmFzaHplaW5ob20iLCJhIjoiY2w0YndzY2pjMWF1bjNjcnlqbDI1OW56YSJ9.kfQVlZWIi3vTQoPvBB8SUw";
 
 const MapComp = (props) => {
-console.log(props);
-  const addToMap = (map) => {
-    // Set marker options.
-    const marker = new mapboxgl.Marker({
-      color: "#568203",
-      draggable: true,
-    })
-      .setLngLat([26.8206, 30.8025])
-      .addTo(map);
-}
-
-
+  //debug props
+  //console.log(props);
   //display map with use effect
   useEffect(() => {
     const map = new mapboxgl.Map({
@@ -27,15 +17,20 @@ console.log(props);
       center: [26.8206, 30.8025],
       zoom: 3,
     });
-    addToMap(map)
+    if (props.pickupCoordinates) {
+      addToMap(map, props.pickupCoordinates);
+    }
+  }, [props.pickupCoordinates, props.dropOffCoordinates]);
 
-  });
-  useEffect(()=>{
-    console.log(props.pickupCoordinates)
-    }, [])
-    
-
-
+  const addToMap = (map, coordinates) => {
+    // Set marker options.
+    const marker = new mapboxgl.Marker({
+      color: "#568203",
+      draggable: true,
+    })
+      .setLngLat(coordinates)
+      .addTo(map);
+  };
 
   return <Wrapper id="map"></Wrapper>;
 };
