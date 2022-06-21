@@ -30,7 +30,10 @@ console.log(props);
     addToMap(map)
 
   });
-
+  useEffect(()=>{
+    console.log(props.pickupCoordinates)
+    }, [])
+    
 
 
 
