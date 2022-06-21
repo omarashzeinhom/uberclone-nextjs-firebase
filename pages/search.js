@@ -1,8 +1,12 @@
-import React from "react";
+import React,{useState} from "react";
 import tw from "tailwind-styled-components/dist/tailwind";
 import Link from "next/link";
 
 const search = () => {
+  const [homeAddrrQuery, setHomeAddrQuery] = useState("");
+  const [workerAddrrQuery, setWorkerAddrQuery] = useState("");
+  console.log(homeAddrrQuery,workerAddrrQuery)
+
   return (
     <Wrapper>
       {/**Button Container */}
@@ -20,8 +24,16 @@ const search = () => {
           <Circle src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655632849/FIXITAPP/nextjs-app-images/search/checkbox-blank-circle-line_1_xub199.svg" />
         </FromToIcons>
         <InputBoxes>
-          <Input placeholder="Your Home Address " />
-          <Input placeholder="Workers Nearest Locations ?" />
+          <Input
+            placeholder="Your Home Address "
+            value={homeAddrrQuery}
+            onChange={(event) => setHomeAddrQuery(event.target.value)}
+          />
+          <Input
+            placeholder="Workers Nearest Locations ? "
+            value={workerAddrrQuery}
+            onChange={(event) => setWorkerAddrQuery(event.target.value)}
+          />
         </InputBoxes>
         <PlusIcon src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655629896/FIXITAPP/nextjs-app-images/search/add-circle-outline_t5ofgb.svg" />
       </InputContainer>
