@@ -13,6 +13,7 @@ const Confirm = () => {
   console.log("PickUp:", pickup);
   console.log("DropOff:", dropoff);
 
+  //useState
   const [pickupCoordinates, setPickupCoordinates] = useState("");
   const [dropOffCoordinates, setDropOffCoordinates] = useState("");
 
