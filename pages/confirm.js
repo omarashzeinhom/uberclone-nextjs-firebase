@@ -3,7 +3,7 @@ import tw from "tailwind-styled-components/dist/tailwind";
 import MapComp from "../components/Map/MapComp";
 import { useEffect, useState } from "react";
 
-const Confirm = () => {
+const Confirm = (props) => {
   const [pickupCoordinates, setPickupCoordinates] = useState("");
   const [dropOffCoordinates, setDropOffCoordinates] = useState("");
 
@@ -53,7 +53,8 @@ const Confirm = () => {
     getPickUpCoordiantes();
     getDropOffCoordiantes();
   }, []);
-
+//
+console.log(props);
   return (
     <Wrapper>
       <MapComp
