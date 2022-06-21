@@ -23,6 +23,14 @@ const MapComp = (props) => {
     if (props.dropOffCoordinates) {
       addToMap(map, props.dropOffCoordinates);
     }
+    if(props.pickupCoordinates && props.dropOffCoordinates){
+      map.fitBounds([
+        props.dropOffCoordinates,
+        props.pickupCoordinates,{}
+      ], {
+        padding: 50
+      })
+    }
   }, [props.pickupCoordinates, props.dropOffCoordinates]);
 
   const addToMap = (map, coordinates) => {
