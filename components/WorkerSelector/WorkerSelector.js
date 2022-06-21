@@ -24,13 +24,13 @@ export default WorkerSelector;
 
 const Title = tw.div`text-white text-center text-xs py-2 border-b`;
 
-const Wrapper = tw.div`flex-1 bg-gray-500`;
+const Wrapper = tw.div`flex-1 bg-orange-100`;
 
 const WorkerOptionsList = tw.div``;
 
 const WorkerDetails = tw.div`flex-1 `;
 
-const Worker = tw.div`flex`;
+const Worker = tw.div`flex p-4 items-center`;
 
 const WorkerImg = tw.img`h-14 w-14 rounded bg-gray-100 mr-4`;
 
