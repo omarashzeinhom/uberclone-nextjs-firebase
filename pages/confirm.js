@@ -7,18 +7,16 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 const Confirm = () => {
-  //router
+  //router built in function from next/router
   const router = useRouter();
   const { pickup, dropoff } = router.query;
+  // debug pickup and drop off
   console.log("PickUp:", pickup);
   console.log("DropOff:", dropoff);
 
   //useState
   const [pickupCoordinates, setPickupCoordinates] = useState("");
   const [dropOffCoordinates, setDropOffCoordinates] = useState("");
-
-  console.log("PickUp:", pickup);
-  console.log("DropOff:", dropoff);
 
   //get PickupCoordinates Start
   const getPickUpCoordiantes = () => {
