@@ -7,8 +7,7 @@ mapboxgl.accessToken =
 
 const MapComp = (props) => {
   //debug props
-  console.log(props);
-  console.log("test")
+  //console.log(props);
   //display map with use effect
   useEffect(() => {
     const map = new mapboxgl.Map({
