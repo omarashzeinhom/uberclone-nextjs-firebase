@@ -1,13 +1,19 @@
 import { useEffect } from "react";
 import mapboxgl from "!mapbox-gl"; // or "const mapboxgl = require('mapbox-gl');"
 import tw from "tailwind-styled-components";
+// Router for next.js
 
 mapboxgl.accessToken =
   "pk.eyJ1Ijoib21hcmFzaHplaW5ob20iLCJhIjoiY2w0YndzY2pjMWF1bjNjcnlqbDI1OW56YSJ9.kfQVlZWIi3vTQoPvBB8SUw";
 
 const MapComp = (props) => {
+
   //debug props
   //console.log(props);
+
+
+
+
   //display map with use effect
   useEffect(() => {
     const map = new mapboxgl.Map({

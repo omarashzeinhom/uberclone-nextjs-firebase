@@ -2,11 +2,25 @@ import React from "react";
 import tw from "tailwind-styled-components/dist/tailwind";
 import MapComp from "../components/Map/MapComp";
 import { useEffect, useState } from "react";
+//
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Confirm = () => {
+  //router
+  const router = useRouter();
+  const { pickup, dropoff } = router.query;
+  console.log("PickUp:", pickup);
+  console.log("DropOff:", dropoff);
+
   const [pickupCoordinates, setPickupCoordinates] = useState("");
   const [dropOffCoordinates, setDropOffCoordinates] = useState("");
+
+  console.log("PickUp:",pickup);
+  console.log("DropOff:", dropoff);
+
+
+
 
   //get PickupCoordinates Start
   const getPickUpCoordiantes = () => {

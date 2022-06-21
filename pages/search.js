@@ -1,11 +1,11 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import tw from "tailwind-styled-components/dist/tailwind";
 import Link from "next/link";
 
 const search = () => {
-  const [homeAddrrQuery, setHomeAddrQuery] = useState("");
-  const [workerAddrrQuery, setWorkerAddrQuery] = useState("");
-  console.log(homeAddrrQuery,workerAddrrQuery)
+  const [pickup, setPickUp] = useState("");
+  const [dropoff, setDropOff] = useState("");
+  //console.log(homeAddrrQuery,workerAddrrQuery)
 
   return (
     <Wrapper>
@@ -26,13 +26,13 @@ const search = () => {
         <InputBoxes>
           <Input
             placeholder="Your Home Address "
-            value={homeAddrrQuery}
-            onChange={(event) => setHomeAddrQuery(event.target.value)}
+            value={pickup}
+            onChange={(e) => setPickUp(e.target.value)}
           />
           <Input
             placeholder="Workers Nearest Locations ? "
-            value={workerAddrrQuery}
-            onChange={(event) => setWorkerAddrQuery(event.target.value)}
+            value={dropoff}
+            onChange={(e) => setDropOff(e.target.value)}
           />
         </InputBoxes>
         <PlusIcon src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655629896/FIXITAPP/nextjs-app-images/search/add-circle-outline_t5ofgb.svg" />
@@ -49,8 +49,8 @@ const search = () => {
           href={{
             pathname: "/confirm",
             query: {
-              pickup: "Cairo",
-              dropoff: "Alexandria",
+              pickup: pickup,
+              dropoff: dropoff,
             },
           }}
         >
