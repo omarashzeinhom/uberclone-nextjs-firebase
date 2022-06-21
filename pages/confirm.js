@@ -2,6 +2,7 @@ import React from "react";
 import tw from "tailwind-styled-components/dist/tailwind";
 import MapComp from "../components/Map/MapComp";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const Confirm = () => {
   const [pickupCoordinates, setPickupCoordinates] = useState("");
@@ -56,6 +57,12 @@ const Confirm = () => {
   //
   return (
     <Wrapper>
+      <ConfirmHeader>
+        <h1>Confirm </h1>
+      </ConfirmHeader>
+      <Link href="/">
+        <BackButton src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655630172/FIXITAPP/nextjs-app-images/search/back-svgrepo-com_s3toio.svg" />
+      </Link>
       <MapComp
         pickupCoordinates={pickupCoordinates}
         dropOffCoordinates={dropOffCoordinates}
@@ -76,3 +83,8 @@ flex flex-col h-screen
 `;
 
 const RideContainer = tw.div`flex-1`;
+
+const BackButton = tw.img`
+ w-12 h-12 rounded-full cursor-pointer`;
+
+const ConfirmHeader = tw.div`text-center text-xl`;
