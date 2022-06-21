@@ -80,7 +80,7 @@ const Confirm = () => {
         {/**Worker Selector Component */}
         <WorkerSelector />
         <ConfirmButtonContainer>
-          Confirm Worker Reservation
+          <ConfirmButton>Confirm Worker Reservation</ConfirmButton>
         </ConfirmButtonContainer>
         {/**Confirm Buttons */}
       </WorkerContainer>
@@ -101,4 +101,6 @@ const BackButton = tw.img`
 
 const ConfirmHeader = tw.div`text-center text-xl`;
 
-const ConfirmButtonContainer = tw.div` my-4 mx-4 py-4 text-center rounded bg-emerald-400 `;
+const ConfirmButtonContainer = tw.div`border-t-2`;
+
+const ConfirmButton = tw.div` my-4 mx-4 py-4 text-center rounded bg-emerald-400`;
