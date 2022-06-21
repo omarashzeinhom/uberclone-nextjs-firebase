@@ -21,11 +21,11 @@ const Confirm = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        setPickupCoordinates( data.features[0].center);
+        setPickupCoordinates(data.features[0].center);
       });
   };
   //debug useState
-  console.log(pickupCoordinates,dropOffCoordinates);
+  console.log(pickupCoordinates, dropOffCoordinates);
 
   //get PickupCoordinates end
 
@@ -43,9 +43,7 @@ const Confirm = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        setDropOffCoordinates(
-          data.features[0].center
-        );
+        setDropOffCoordinates(data.features[0].center);
       });
   };
   // get DropOffCoordinates End
@@ -58,7 +56,10 @@ const Confirm = () => {
 
   return (
     <Wrapper>
-      <MapComp />
+      <MapComp
+        pickupCoordinates={pickupCoordinates}
+        dropOffCoordinates={dropOffCoordinates}
+      />
       <RideContainer>
         {/**Ride Selector */}
 
