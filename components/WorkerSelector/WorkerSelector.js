@@ -14,7 +14,11 @@ const WorkerSelector = ({ pickupCoordinates, dropOffCoordinates }) => {
     //console.log(`${apidirections}`);
     //get trip time from map box api
     //2pickup coordinates and 2 points for the dropoff location [x]
-    fetch(`${[apidirections]}`);
+    fetch(`${[apidirections]}`)
+      .then((response) => response.json())
+      .then((apidirections) => {
+        setTripTime(apidirections);
+      });
   }, [pickupCoordinates, dropOffCoordinates]);
 
   return (
