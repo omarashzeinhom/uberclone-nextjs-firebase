@@ -8,18 +8,16 @@ const WorkerSelector = () => {
       <Title>WorkerSelector Options List</Title>
 
       <WorkerOptionsList>
-      { workerList.map((worker,index)=>(
- <Worker key={index}>
- <WorkerImg src={worker.imgUrl} />
- <WorkerDetails>
-   <WorkerService>{worker.service}</WorkerService>
-   <WorkerArriveTime>15 mins away</WorkerArriveTime>
- </WorkerDetails>
- <WorkerPrice>49.99$</WorkerPrice>
-</Worker>
-))}
-
-       
+        {workerList.map((worker, index) => (
+          <Worker key={index}>
+            <WorkerImg src={worker.imgUrl} />
+            <WorkerDetails>
+              <WorkerService>{worker.service}</WorkerService>
+              <WorkerArriveTime>15 mins away</WorkerArriveTime>
+            </WorkerDetails>
+            <WorkerPrice>49.99$</WorkerPrice>
+          </Worker>
+        ))}
       </WorkerOptionsList>
     </Wrapper>
   );
