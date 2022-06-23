@@ -68,3 +68,10 @@ import "mapbox-gl/dist/mapbox-gl.css"
 ## References 
 
 1. [Markers and controls Map Box](https://docs.mapbox.com/mapbox-gl-js/api/markers/#marker)
+
+
+### Tasks
+
+1. Add Navigation []
+2. Calculate the prices for the worker[]
+3. Add Login Page[]
