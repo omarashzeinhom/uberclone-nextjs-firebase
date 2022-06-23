@@ -27,7 +27,7 @@ export default WorkerSelector;
 
 const Title = tw.div`text-white text-center text-xs py-2 border-b`;
 
-const Wrapper = tw.div`flex-1 bg-orange-100`;
+const Wrapper = tw.div`flex flex-col flex-1 bg-orange-100 overflow-y-scroll`;
 
 const WorkerOptionsList = tw.div``;
 
