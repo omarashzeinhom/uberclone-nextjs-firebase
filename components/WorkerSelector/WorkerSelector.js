@@ -11,11 +11,11 @@ const WorkerSelector = ({ pickupCoordinates, dropOffCoordinates }) => {
     const dropoffdrive = `${dropOffCoordinates[0]},${dropOffCoordinates[1]}`;
     const acess_token = `?access_token=pk.eyJ1Ijoib21hcmFzaHplaW5ob20iLCJhIjoiY2w0YndzY2pjMWF1bjNjcnlqbDI1OW56YSJ9.kfQVlZWIi3vTQoPvBB8SUw`;
     const apidirections = `https://api.mapbox.com/directions/v5/mapbox/driving/${pickupdrive};${dropoffdrive}${acess_token}`;
-    //console.log(`${htt}`)
+    console.log(`${apidirections}`)
     //get trip time from map box api
     //2pickup coordinates and 2 points for the dropoff location [x]
     fetch(`${[apidirections]}`);
-  }, [pickupCoordinates, dropOffCoordinates]);
+  }, [pickupCoordinates,dropOffCoordinates]);
 
   return (
     <Wrapper>
