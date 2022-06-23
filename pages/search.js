@@ -23,6 +23,7 @@ const search = () => {
           <Line src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655633562/FIXITAPP/nextjs-app-images/search/1539792897_qyla5f.svg" />
           <Circle src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655632849/FIXITAPP/nextjs-app-images/search/checkbox-blank-circle-line_1_xub199.svg" />
         </FromToIcons>
+
         <InputBoxes>
           <Input
             placeholder="Your Home Address "
