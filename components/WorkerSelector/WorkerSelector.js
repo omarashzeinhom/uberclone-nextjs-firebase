@@ -10,7 +10,7 @@ const WorkerSelector = () => {
       <WorkerOptionsList>
       { workerList.map((worker,index)=>(
  <Worker key={index}>
- <WorkerImg src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655851971/FIXITAPP/ionic-app-images/WorkerSelector/painter-svgrepo-com_rvbpbg.svg" />
+ <WorkerImg src={worker.imgUrl} />
  <WorkerDetails>
    <WorkerService>{worker.service}</WorkerService>
    <WorkerArriveTime>15 mins away</WorkerArriveTime>
