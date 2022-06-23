@@ -1,5 +1,6 @@
 import React from "react";
 import tw from "tailwind-styled-components/dist/tailwind";
+import { workerList } from "../../data/workerList";
 
 const WorkerSelector = () => {
   return (
@@ -7,14 +8,18 @@ const WorkerSelector = () => {
       <Title>WorkerSelector Options List</Title>
 
       <WorkerOptionsList>
-        <Worker>
-          <WorkerImg src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655851971/FIXITAPP/ionic-app-images/WorkerSelector/painter-svgrepo-com_rvbpbg.svg" />
-          <WorkerDetails>
-            <WorkerService>Plumber</WorkerService>
-            <WorkerArriveTime>15 mins away</WorkerArriveTime>
-          </WorkerDetails>
-          <WorkerPrice>49.99$</WorkerPrice>
-        </Worker>
+      { workerList.map((worker,index)=>(
+ <Worker key={index}>
+ <WorkerImg src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655851971/FIXITAPP/ionic-app-images/WorkerSelector/painter-svgrepo-com_rvbpbg.svg" />
+ <WorkerDetails>
+   <WorkerService>{worker.service}</WorkerService>
+   <WorkerArriveTime>15 mins away</WorkerArriveTime>
+ </WorkerDetails>
+ <WorkerPrice>49.99$</WorkerPrice>
+</Worker>
+))}
+
+       
       </WorkerOptionsList>
     </Wrapper>
   );
