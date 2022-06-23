@@ -6,16 +6,22 @@ const WorkerSelector = ({ pickupCoordinates, dropOffCoordinates }) => {
   const [tripTime, setTripTime] = useState(0);
   // 1. pickuppCoordinates
   //2. dropoffCoordinates
-
   useEffect(() => {
+    const pickupdrive = `${pickupCoordinates[0]},${pickupCoordinates[1]}`
+    const dropoffdrive = `${dropOffCoordinates[0]},${dropOffCoordinates[1]}`
+    const acess_token = `?access_token=pk.eyJ1Ijoib21hcmFzaHplaW5ob20iLCJhIjoiY2w0YndzY2pjMWF1bjNjcnlqbDI1OW56YSJ9.kfQVlZWIi3vTQoPvBB8SUw`
+    const htt = `https://api.mapbox.com/directions/v5/mapbox/driving/${pickupdrive};${dropoffdrive}${acess_token}`;
+    console.log(`${htt}`)
+    
     //get trip time from map box api
-    //using template literals
-    //2pickup coordinates and 2 points for the dropoff location
-    const access_token = ""
+    //2pickup coordinates and 2 points for the dropoff location [x]
     fetch(
-      `https://api.mapbox.com/directions/v5/mapbox/driving/${pickupCoordinates[0]},${pickupCoordinates[1]};${dropOffCoordinates[0]},${dropOffCoordinates[1]}?access_token=pk.eyJ1Ijoib21hcmFzaHplaW5ob20iLCJhIjoiY2w0YndzY2pjMWF1bjNjcnlqbDI1OW56YSJ9.kfQVlZWIi3vTQoPvBB8SUw`
+      `${[htt]}`,
+
     );
-  }, []);
+  }, [pickupCoordinates,dropOffCoordinates]);
+
+
 
   return (
     <Wrapper>
