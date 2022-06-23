@@ -94,7 +94,7 @@ const Wrapper = tw.div`
 flex flex-col h-screen  
 `;
 
-const WorkerContainer = tw.div`flex flex-col flex-1 `;
+const WorkerContainer = tw.div`flex flex-col flex-1 h-1/2`;
 
 const BackButton = tw.img`
  w-12 h-12 rounded-full cursor-pointer`;
