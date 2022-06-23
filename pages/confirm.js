@@ -16,8 +16,8 @@ const Confirm = () => {
   //console.log("DropOff:", dropoff);
 
   //useState
-  const [pickupCoordinates, setPickupCoordinates] = useState("");
-  const [dropOffCoordinates, setDropOffCoordinates] = useState("");
+  const [pickupCoordinates, setPickupCoordinates] = useState([0, 0]);
+  const [dropOffCoordinates, setDropOffCoordinates] = useState([0, 0]);
 
   //get PickupCoordinates Start
   const getPickUpCoordiantes = (pickup) => {
@@ -78,7 +78,10 @@ const Confirm = () => {
       />
       <WorkerContainer>
         {/**Worker Selector Component */}
-        <WorkerSelector />
+        <WorkerSelector
+          pickupCoordinates={pickupCoordinates}
+          dropOffCoordinates={dropOffCoordinates}
+        />
         <ConfirmButtonContainer>
           <ConfirmButton>Confirm Worker Reservation</ConfirmButton>
         </ConfirmButtonContainer>
