@@ -5,8 +5,7 @@ import { workerList } from "../../data/workerList";
 const WorkerSelector = () => {
   return (
     <Wrapper>
-      <Title>WorkerSelector Options List</Title>
-
+      <Title>Workers Options </Title>
       <WorkerOptionsList>
         {workerList.map((worker, index) => (
           <Worker key={index}>
@@ -25,11 +24,11 @@ const WorkerSelector = () => {
 
 export default WorkerSelector;
 
-const Title = tw.div`text-white text-center text-xs py-2 border-b`;
+const Title = tw.div` text-center text-xs py-2 border-b`;
 
 const Wrapper = tw.div`flex flex-col flex-1 bg-orange-100 overflow-y-scroll`;
 
-const WorkerOptionsList = tw.div``;
+const WorkerOptionsList = tw.div` overflow-y-scroll`;
 
 const WorkerDetails = tw.div`flex-1 `;
 
