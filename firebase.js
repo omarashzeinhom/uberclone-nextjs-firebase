@@ -25,8 +25,8 @@ const app = initializeApp(firebaseConfig);
 
 //exported here so other files can have access to auth, provider and app
 
-const provider = new GoogleAuthProvider()
-const auth = getAuth
+const provider = new GoogleAuthProvider();
+const auth = getAuth();
 
 //exported here so other files can have access to auth, provider and app
-export {app, provider, auth}
+export {app, provider, auth};
