@@ -1,21 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
 import tw from "tailwind-styled-components/dist/tailwind";
+import {
+  signInWithPopup,
+  onAuthStateChanged,
+} from "firebase/auth";
 
 const login = () => {
   return (
     <Wrapper>
-        <Title>
-        Login
-        </Title>
-        <LoginImageContainer>
-            <LoginIcon
-                src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655577547/FIXITAPP/ionic-app-images/header/fix__it__header__logo_t8mpen.svg"
-                />
-            <LoginBannerImage
- src={
-    "https://res.cloudinary.com/dxgqvvg0z/image/upload/v1656174907/FIXITAPP/ionic-app-images/Login%20and%20get%20started/undraw_under_construction_-46-pa_1_zkz0vc.svg"
-  }            />
-        </LoginImageContainer>
+      <Title>Login</Title>
+      <LoginImageContainer>
+        <LoginIcon src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655577547/FIXITAPP/ionic-app-images/header/fix__it__header__logo_t8mpen.svg" />
+        <LoginBannerImage
+          src={
+            "https://res.cloudinary.com/dxgqvvg0z/image/upload/v1656174907/FIXITAPP/ionic-app-images/Login%20and%20get%20started/undraw_under_construction_-46-pa_1_zkz0vc.svg"
+          }
+        />
+      </LoginImageContainer>
       <SignInButton>Sign in with google</SignInButton>
     </Wrapper>
   );
@@ -29,7 +31,7 @@ const Title = tw.div`bg-green-400 w-full py-3 text-center text-white mb-4 text-5
 
 const LoginImageContainer = tw.div`flex flex-col `;
 
-const LoginBannerImage = tw.img`w-full h-1/2`;
+const LoginBannerImage = tw.img`w-full h-40`;
 
 const LoginIcon = tw.img`h-32 w-32 rounded object-contain self-start`;
 
