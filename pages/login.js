@@ -13,7 +13,14 @@ const login = () => {
   //debug router
   const router = useRouter();
   console.log(router);
-  
+
+  useEffect(()=>{
+    onAuthStateChanged(auth,user=>{
+      if(user){
+        router.push('/')
+      }
+    })
+  })
   return (
     <Wrapper>
       <Title>Login</Title>
@@ -25,7 +32,7 @@ const login = () => {
           }
         />
       </LoginImageContainer>
-      <SignInButton>Sign in with google</SignInButton>
+      <SignInButton onClick={()=> signInWithPopup(auth,provider)}>Sign in with google</SignInButton>
     </Wrapper>
   );
 };
