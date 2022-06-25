@@ -25,8 +25,8 @@ const Wrapper = tw.div`flex flex-col h-screen w-screen bg-gray-200`;
 
 const LoginImageContainer = tw.div``;
 
-const LoginBannerImage = tw.img``;
+const LoginBannerImage = tw.img`w-full h-1/2`;
 
-const LoginIcon = tw.img``;
+const LoginIcon = tw.img`h-32 w-32 rounded object-contain`;
 
 const SignInButton = tw.button`bg-green-500 text-white text-center py-4 mt-8 selfcenter w-full `;
