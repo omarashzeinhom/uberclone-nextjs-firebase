@@ -5,9 +5,15 @@ import {
   signInWithPopup,
   onAuthStateChanged,
 } from "firebase/auth";
+//from Firebase.js file in root folder
+
 import {auth , provider} from '../firebase';
 
 const login = () => {
+  //debug router
+  const router = useRouter();
+  console.log(router);
+  
   return (
     <Wrapper>
       <Title>Login</Title>
