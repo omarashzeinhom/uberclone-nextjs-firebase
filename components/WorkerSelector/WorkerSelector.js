@@ -16,7 +16,7 @@ const WorkerSelector = ({ pickupCoordinates, dropOffCoordinates }) => {
 
     //get trip time from map box api
     //2pickup coordinates and 2 points for the dropoff location [x]
-    tripTime = fetch(`${[apidirections]}`)
+    const tripTime = fetch(`${[apidirections]}`)
       .then((response) => response.json())
       .then((data) => {
         setTripTime(data.routes[0].duration / 100);
