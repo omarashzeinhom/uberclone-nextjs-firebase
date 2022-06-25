@@ -35,7 +35,9 @@ const WorkerSelector = ({ pickupCoordinates, dropOffCoordinates }) => {
               <WorkerService>{worker.service}</WorkerService>
               <WorkerArriveTime>15 mins away</WorkerArriveTime>
             </WorkerDetails>
-            <WorkerPrice>{"$" + tripTime * worker.multiplier}</WorkerPrice>
+            <WorkerPrice>
+              {"$" + (tripTime * worker.multiplier).toFixed(2)}
+            </WorkerPrice>
           </Worker>
         ))}
       </WorkerOptionsList>
