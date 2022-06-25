@@ -13,12 +13,15 @@ const WorkerSelector = ({ pickupCoordinates, dropOffCoordinates }) => {
     const apidirections = `https://api.mapbox.com/directions/v5/mapbox/driving/${pickupdrive};${dropoffdrive}${acess_token}`;
     //console.log(`${apidirections}`);
     //get trip time from map box api
+
+    //get trip time from map box api
     //2pickup coordinates and 2 points for the dropoff location [x]
-    fetch(`${[apidirections]}`)
+    tripTime = fetch(`${[apidirections]}`)
       .then((response) => response.json())
-      .then((apidirections) => {
-        setTripTime(apidirections);
+      .then((data) => {
+        setTripTime(data.routes[0].duration / 100);
       });
+    //these are added to the dependency array to show the setTripTime dont remove or it will not be shown
   }, [pickupCoordinates, dropOffCoordinates]);
 
   return (
@@ -32,7 +35,7 @@ const WorkerSelector = ({ pickupCoordinates, dropOffCoordinates }) => {
               <WorkerService>{worker.service}</WorkerService>
               <WorkerArriveTime>15 mins away</WorkerArriveTime>
             </WorkerDetails>
-            <WorkerPrice>49.99$</WorkerPrice>
+            <WorkerPrice>{"$" + tripTime * worker.multiplier}</WorkerPrice>
           </Worker>
         ))}
       </WorkerOptionsList>
