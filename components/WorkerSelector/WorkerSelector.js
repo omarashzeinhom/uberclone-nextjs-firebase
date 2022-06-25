@@ -36,6 +36,7 @@ const WorkerSelector = ({ pickupCoordinates, dropOffCoordinates }) => {
               <WorkerArriveTime>15 mins away</WorkerArriveTime>
             </WorkerDetails>
             <WorkerPrice>
+              {/**toFixed(2) is added to bring numbers tod decimal places */}
               {"$" + (tripTime * worker.multiplier).toFixed(2)}
             </WorkerPrice>
           </Worker>

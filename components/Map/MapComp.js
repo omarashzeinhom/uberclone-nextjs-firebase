@@ -17,7 +17,7 @@ const MapComp = (props) => {
       style:
         "mapbox://styles/omarashzeinhom/cl4k5qsqz000z14s7wqbpzlqv?optimize=true",
       center: [26.8206, 30.8025],
-      zoom: 3,
+      zoom: 5,
     });
     if (props.pickupCoordinates) {
       addToMap(map, props.pickupCoordinates);
