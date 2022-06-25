@@ -5,6 +5,7 @@ import {
   signInWithPopup,
   onAuthStateChanged,
 } from "firebase/auth";
+import {auth , provider} from '../firebase';
 
 const login = () => {
   return (
