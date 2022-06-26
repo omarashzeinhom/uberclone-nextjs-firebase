@@ -29,6 +29,7 @@ const router= useRouter();
       })
       } else {
         setUser(null);
+        router.push('/login');
       }
     })
   }, [])
