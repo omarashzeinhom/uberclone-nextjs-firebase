@@ -1,20 +1,24 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+//
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import tw from "tailwind-styled-components";
+///
 import mapboxgl from "!mapbox-gl"; // or "const mapboxgl = require('mapbox-gl');"
 import MapComp from "../components/Map/MapComp";
 import { useRouter } from "next/router";
 //FIREBASE 
-import { onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../firebase";
 
 export default function Home() {
 const [user, setUser] = useState(null);
 const router= useRouter();
  
+
+
   useEffect(()=>{
     return onAuthStateChanged(auth,user=>{
       if(user){
@@ -48,7 +52,10 @@ const router= useRouter();
           />
           <Profile>
             <Name>{user && user.name}</Name>
-            <UserImg src={user && user.photoUrl} />
+            <UserImg src={user && user.photoUrl} 
+            onClick={()=> signOut(auth)}
+            
+            />
           </Profile>
         </Header>
         {/**Action Btns */}
@@ -113,7 +120,7 @@ mr-5 w-20 text-sm
 `;
 
 const UserImg = tw.img`
-rounded-full w-15 h-12 mb-4 border border-gray-200 bg-stone-500/75 hover:bg-stone-600 p-px
+rounded-full w-15 h-12 mb-4 border border-gray-200 bg-stone-500/75 hover:bg-stone-600 p-px cursor-pointer
 `;
 
 const ActionButtons = tw.div`

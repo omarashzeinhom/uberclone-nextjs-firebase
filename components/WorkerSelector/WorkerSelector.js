@@ -19,6 +19,7 @@ const WorkerSelector = ({ pickupCoordinates, dropOffCoordinates }) => {
     const tripTime = fetch(`${[apidirections]}`)
       .then((response) => response.json())
       .then((data) => {
+        //error here duration comes undefined in confirm
         setTripTime(data.routes[0].duration / 100);
       });
     //these are added to the dependency array to show the setTripTime dont remove or it will not be shown
