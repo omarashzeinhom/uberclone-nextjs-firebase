@@ -15,7 +15,7 @@ const login = () => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         router.push("/");
-        name: user.displayName; 
+        name: user.displayName;  
         photoUrl: user.photoURL;
       }
     });

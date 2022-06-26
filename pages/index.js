@@ -9,33 +9,28 @@ import tw from "tailwind-styled-components";
 import mapboxgl from "!mapbox-gl"; // or "const mapboxgl = require('mapbox-gl');"
 import MapComp from "../components/Map/MapComp";
 import { useRouter } from "next/router";
-//FIREBASE 
+//FIREBASE
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../firebase";
 
 export default function Home() {
-const [user, setUser] = useState(null);
-const router= useRouter();
- 
+  const [user, setUser] = useState(null);
+  const router = useRouter();
 
-
-  useEffect(()=>{
-    return onAuthStateChanged(auth,user=>{
-      if(user){
-      router.push('/')
-      setUser({
-        name: user.displayName,
-        photoUrl: user.photoURL
-      })
+  useEffect(() => {
+    return onAuthStateChanged(auth, (user) => {
+      if (user) {
+        router.push("/");
+        setUser({
+          name: user.displayName,
+          photoUrl: user.photoURL,
+        });
       } else {
         setUser(null);
-        router.push('/login');
+        router.push("/login");
       }
-    })
-  }, [])
-
-
-
+    });
+  }, []);
 
   return (
     <Wrapper>
@@ -53,9 +48,9 @@ const router= useRouter();
           />
           <Profile>
             <Name>{user && user.name}</Name>
-            <UserImg src={user && user.photoUrl} 
-            onClick={()=> signOut(auth)}
-            
+            <UserImg
+              src={user && user.photoUrl}
+              onClick={() => signOut(auth)}
             />
           </Profile>
         </Header>
