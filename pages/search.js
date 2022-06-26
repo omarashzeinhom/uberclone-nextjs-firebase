@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import tw from "tailwind-styled-components/dist/tailwind";
 import Link from "next/link";
 
-const search = () => {
+const Search = () => {
   const [pickup, setPickUp] = useState("");
   const [dropoff, setDropOff] = useState("");
   //console.log(homeAddrrQuery,workerAddrrQuery)
@@ -62,7 +62,7 @@ const search = () => {
   );
 };
 
-export default search;
+export default Search;
 
 const Wrapper = tw.div`
  bg-gray-500 h-screen 

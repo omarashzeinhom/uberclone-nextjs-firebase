@@ -17,7 +17,7 @@ export default function Home() {
   const [user, setUser] = useState(null);
   const router = useRouter();
 
-  useEffect(() => {
+  useEffect((router) => {
     return onAuthStateChanged(auth, (user) => {
       if (user) {
         router.push("/");
@@ -40,7 +40,8 @@ export default function Home() {
       <ActionItems>
         {/**Header */}
         <Header>
-          <img
+          <Image
+          alt="header__img"
             width="150"
             heigh="150"
             loading="lazy"

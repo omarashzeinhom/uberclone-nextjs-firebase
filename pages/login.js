@@ -6,7 +6,7 @@ import { signInWithPopup, onAuthStateChanged } from "firebase/auth";
 
 import { auth, provider } from "../firebase";
 
-const login = () => {
+const Login = () => {
   //debug router
   const router = useRouter();
   console.log(router);
@@ -38,7 +38,7 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;
 
 const Wrapper = tw.div`flex flex-col h-screen w-screen bg-gray-200`;
 
