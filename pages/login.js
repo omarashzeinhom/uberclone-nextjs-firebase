@@ -1,26 +1,25 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import tw from "tailwind-styled-components/dist/tailwind";
-import {
-  signInWithPopup,
-  onAuthStateChanged,
-} from "firebase/auth";
+import { signInWithPopup, onAuthStateChanged } from "firebase/auth";
 //from Firebase.js file in root folder
 
-import {auth , provider} from '../firebase';
+import { auth, provider } from "../firebase";
 
 const login = () => {
   //debug router
   const router = useRouter();
   console.log(router);
 
-  useEffect(()=>{
-    onAuthStateChanged(auth,user=>{
-      if(user){
-        router.push('/')
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        router.push("/");
+        name: user.displayName; 
+        photoUrl: user.photoURL;
       }
-    })
-  })
+    });
+  });
   return (
     <Wrapper>
       <Title>Login</Title>
@@ -32,7 +31,9 @@ const login = () => {
           }
         />
       </LoginImageContainer>
-      <SignInButton onClick={()=> signInWithPopup(auth,provider)}>Sign in with google</SignInButton>
+      <SignInButton onClick={() => signInWithPopup(auth, provider)}>
+        Sign in with google
+      </SignInButton>
     </Wrapper>
   );
 };

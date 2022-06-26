@@ -1,14 +1,37 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-
 import tw from "tailwind-styled-components";
 import mapboxgl from "!mapbox-gl"; // or "const mapboxgl = require('mapbox-gl');"
 import MapComp from "../components/Map/MapComp";
+import { useRouter } from "next/router";
+//FIREBASE 
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../firebase";
 
 export default function Home() {
+const [user, setUser] = useState(null);
+const router= useRouter();
+ 
+  useEffect(()=>{
+    return onAuthStateChanged(auth,user=>{
+      if(user){
+      router.push('/')
+      setUser({
+        name: user.displayName,
+        photoUrl: user.photoURL
+      })
+      } else {
+        setUser(null);
+      }
+    })
+  }, [])
+
+
+
+
   return (
     <Wrapper>
       <Map id="map">
@@ -24,8 +47,8 @@ export default function Home() {
             src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655577502/FIXITAPP/nextjs-app-images/header/fix__it__header__logo_daikqr.svg"
           />
           <Profile>
-            <Name>Omar AbdELRahman</Name>
-            <UserImg src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655579775/FIXITAPP/nextjs-app-images/header/pp_home_removedbg_g5eq7r_hp8ikc.webp" />
+            <Name>{user && user.name}</Name>
+            <UserImg src={user && user.photoUrl} />
           </Profile>
         </Header>
         {/**Action Btns */}
