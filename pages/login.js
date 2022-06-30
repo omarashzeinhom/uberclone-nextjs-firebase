@@ -48,6 +48,6 @@ const LoginImageContainer = tw.div`flex flex-col `;
 
 const LoginBannerImage = tw.img`w-full h-40`;
 
-const LoginIcon = tw.img`h-32 w-32 rounded object-contain self-start`;
+const LoginIcon = tw.img`h-12 w-12 rounded-full object-contain selfcenter`;
 
 const SignInButton = tw.button`bg-green-500 text-white text-center py-4 mt-8 selfcenter w-full `;
