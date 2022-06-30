@@ -19,7 +19,6 @@ export default function Home() {
 
   useEffect(() => {
     return onAuthStateChanged(auth, (user) => {
-
       if (user) {
         router.push("/");
         setUser({
@@ -41,19 +40,14 @@ export default function Home() {
       <ActionItems>
         {/**Header */}
         <Header>
-        
           <Profile>
-          <UserImg
+            <UserImg
               src={user && user.photoUrl}
               onClick={() => signOut(auth)}
             />
             <Name>{user && user.name}</Name>
-           <br/>
-           <LogoutButton onClick={() => signOut(auth)}>
-           Logout
-
-           </LogoutButton>
-          
+            <br />
+            <LogoutButton onClick={() => signOut(auth)}>Logout</LogoutButton>
           </Profile>
         </Header>
         {/**Action Btns */}
@@ -84,6 +78,7 @@ export default function Home() {
           <InputButton>Where to?</InputButton>
         </Link>
       </ActionItems>
+      <Signature>@Omar Zeinhom</Signature>
     </Wrapper>
   );
 }
@@ -136,3 +131,5 @@ h-20 bg-gray-200 p-4 rounded text-2x1 flex items-center mt-8 cursor-pointer
 `;
 
 const LogoutButton = tw.button`bg-red-500 rounded p-4 cursor-pointer text-white`;
+
+const Signature = tw.div`text-center`;
