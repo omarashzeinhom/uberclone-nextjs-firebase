@@ -18,6 +18,7 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
+
     return onAuthStateChanged(auth, (user) => {
       if (user) {
         router.push("/");
@@ -30,7 +31,7 @@ export default function Home() {
         router.push("/login");
       }
     });
-  }, []);
+ }, []);
 
   return (
     <Wrapper>

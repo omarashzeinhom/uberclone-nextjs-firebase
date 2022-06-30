@@ -85,7 +85,7 @@ const Confirm = () => {
           dropOffCoordinates={dropOffCoordinates}
         />
         <ConfirmButtonContainer>
-          <ConfirmButton>Confirm Ride</ConfirmButton>
+          <ConfirmButton href="/">Confirm Ride</ConfirmButton>
         </ConfirmButtonContainer>
         {/**Confirm Buttons */}
       </WorkerContainer>
@@ -106,6 +106,6 @@ const BackButton = tw.img`
 
 const ConfirmHeader = tw.div`text-center text-xl`;
 
-const ConfirmButtonContainer = tw.div`border-t-2`;
+const ConfirmButtonContainer = tw.div`border-t-2 cursor-pointer`;
 
 const ConfirmButton = tw.div` my-4 mx-4 py-4 text-center rounded bg-emerald-400`;
