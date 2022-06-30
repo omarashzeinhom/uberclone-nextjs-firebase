@@ -17,8 +17,9 @@ export default function Home() {
   const [user, setUser] = useState(null);
   const router = useRouter();
 
-  useEffect((router) => {
+  useEffect(() => {
     return onAuthStateChanged(auth, (user) => {
+
       if (user) {
         router.push("/");
         setUser({
@@ -40,34 +41,34 @@ export default function Home() {
       <ActionItems>
         {/**Header */}
         <Header>
-          <Image
-          alt="header__img"
-            width="150"
-            heigh="150"
-            loading="lazy"
-            src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655577502/FIXITAPP/nextjs-app-images/header/fix__it__header__logo_daikqr.svg"
-          />
+        
           <Profile>
-            <Name>{user && user.name}</Name>
-            <UserImg
+          <UserImg
               src={user && user.photoUrl}
               onClick={() => signOut(auth)}
             />
+            <Name>{user && user.name}</Name>
+           <br/>
+           <LogoutButton onClick={() => signOut(auth)}>
+           Logout
+
+           </LogoutButton>
+          
           </Profile>
         </Header>
         {/**Action Btns */}
         <ActionButtons>
           <Link href="/search">
             <ActionButton>
-              <ActionButtonImage src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655585748/FIXITAPP/nextjs-app-images/ActionButtonImages/woker-avatar-male_mieyjc.svg" />
-              <h5> Worker</h5>
+              <ActionButtonImage src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1656550658/UBERCLONE%20APP/car-svgrepo-com_3_aafppv.svg" />
+              <h5> Ride </h5>
             </ActionButton>
           </Link>
 
           <Link href="/search">
             <ActionButton>
               <ActionButtonImage src="https://res.cloudinary.com/dxgqvvg0z/image/upload/v1655585697/FIXITAPP/nextjs-app-images/ActionButtonImages/worker-tool-search_au8m9f.svg" />
-              <h5>Profession </h5>
+              <h5>Type </h5>
             </ActionButton>
           </Link>
 
@@ -133,3 +134,5 @@ const InputButton = tw.div`
 
 h-20 bg-gray-200 p-4 rounded text-2x1 flex items-center mt-8 cursor-pointer
 `;
+
+const LogoutButton = tw.button`bg-red-500 rounded p-4 cursor-pointer text-white`;

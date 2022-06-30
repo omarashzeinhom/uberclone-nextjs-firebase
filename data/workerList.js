@@ -1,34 +1,29 @@
 export const workerList = [
   {
     imgUrl:
-      "https://res.cloudinary.com/dxgqvvg0z/image/upload/v1656005176/FIXITAPP/nextjs-app-images/confirm/worker-svgrepo-com_vipu1n.svg",
-    service: "Worker",
-    multiplier: 1,
+      "https://res.cloudinary.com/dxgqvvg0z/image/upload/v1656550658/UBERCLONE%20APP/car-svgrepo-com_3_aafppv.svg",
+    service: "Economic",
+    multiplier: 1.2,
   },
 
   {
     imgUrl:
-      "https://res.cloudinary.com/dxgqvvg0z/image/upload/v1656005555/FIXITAPP/ionic-app-images/confirm/worker-svgrepo-com_5_d2cql2.svg",
-    service: "Female Worker(Females Only)",
-    multiplier: 1,
+      "https://res.cloudinary.com/dxgqvvg0z/image/upload/v1656550658/UBERCLONE%20APP/car-svgrepo-com_4_itj4bx.svg",
+    service: "Economic",
+    multiplier: 1.2,
   },
 
   {
     imgUrl:
-      "https://res.cloudinary.com/dxgqvvg0z/image/upload/v1656005313/FIXITAPP/ionic-app-images/confirm/worker-svgrepo-com_1_qldnrx.svg",
-    service: "Worker+",
-    multiplier: 1.5,
-  },
-  {
-    imgUrl:
-      "https://res.cloudinary.com/dxgqvvg0z/image/upload/v1656005176/FIXITAPP/nextjs-app-images/confirm/worker-svgrepo-com_3_efxhpc.svg",
-    service: "Worker Female+",
-    multiplier: 1.5,
-  },
-  {
-    imgUrl:
-      "https://res.cloudinary.com/dxgqvvg0z/image/upload/v1656005176/FIXITAPP/nextjs-app-images/confirm/worker-svgrepo-com_4_rl35jn.svg",
-    service: "Multiple Workers rate increases by 1 to be split upon workers",
+      "https://res.cloudinary.com/dxgqvvg0z/image/upload/v1656550658/UBERCLONE%20APP/car-svgrepo-com_2_msxsa2.svg",
+    service: "Premium",
     multiplier: 2,
   },
+  {
+    imgUrl:
+      "https://res.cloudinary.com/dxgqvvg0z/image/upload/v1656550658/UBERCLONE%20APP/car-svgrepo-com_1_szfzr3.svg",
+    service: "Luxurious",
+    multiplier: 2,
+  },
+
 ];

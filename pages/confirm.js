@@ -85,7 +85,7 @@ const Confirm = () => {
           dropOffCoordinates={dropOffCoordinates}
         />
         <ConfirmButtonContainer>
-          <ConfirmButton>Confirm Worker Reservation</ConfirmButton>
+          <ConfirmButton>Confirm Ride</ConfirmButton>
         </ConfirmButtonContainer>
         {/**Confirm Buttons */}
       </WorkerContainer>

@@ -26,12 +26,12 @@ const Search = () => {
 
         <InputBoxes>
           <Input
-            placeholder="Your Home Address "
+            placeholder="Pickup Point"
             value={pickup}
             onChange={(e) => setPickUp(e.target.value)}
           />
           <Input
-            placeholder="Workers Nearest Locations ? "
+            placeholder="Drop off point"
             value={dropoff}
             onChange={(e) => setDropOff(e.target.value)}
           />
