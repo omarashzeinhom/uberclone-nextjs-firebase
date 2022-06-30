@@ -4,6 +4,7 @@ import { workerList } from "../../data/workerList";
 
 const WorkerSelector = ({ pickupCoordinates, dropOffCoordinates }) => {
   const [tripTime, setTripTime] = useState(0);
+
   // 1. pickuppCoordinates
   //2. dropoffCoordinates
   useEffect(() => {
@@ -34,7 +35,7 @@ const WorkerSelector = ({ pickupCoordinates, dropOffCoordinates }) => {
             <WorkerImg src={worker.imgUrl} />
             <WorkerDetails>
               <WorkerService>{worker.service}</WorkerService>
-              <WorkerArriveTime>15 mins away</WorkerArriveTime>
+              <WorkerArriveTime>{worker.time}</WorkerArriveTime>
             </WorkerDetails>
             <WorkerPrice>
               {/**toFixed(2) is added to bring numbers tod decimal places */}
@@ -59,7 +60,7 @@ const WorkerDetails = tw.div`flex-1 `;
 
 const Worker = tw.div`flex p-4 items-center`;
 
-const WorkerImg = tw.img`h-14 w-14 rounded bg-gray-100 mr-4`;
+const WorkerImg = tw.img`h-14 w-14 rounded-full bg-gray-300 mr-4`;
 
 const WorkerPrice = tw.div``;
 
