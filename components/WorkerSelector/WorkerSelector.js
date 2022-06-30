@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import tw from "tailwind-styled-components/dist/tailwind";
 import { workerList } from "../../data/workerList";
 
-const WorkerSelector = ({ pickupCoordinates, dropOffCoordinates } ) => {
+const WorkerSelector = ({ pickupCoordinates, dropOffCoordinates }) => {
   const [tripTime, setTripTime] = useState(0);
   // 1. pickuppCoordinates
   //2. dropoffCoordinates
@@ -19,12 +19,10 @@ const WorkerSelector = ({ pickupCoordinates, dropOffCoordinates } ) => {
     const tripTime = fetch(`${[apidirections]}`)
       .then((response) => response.json())
       .then((data) => {
-
-    
-
         //errorhere duration comes undefined in confirm
-        setTripTime ( data.routes[0].duration / 100)
-      }).catch((e) => console.log(e));;;
+        setTripTime(data.routes[0].duration / 100);
+      })
+      .catch((error) => console.log(error));
     //these are added to the dependency array to show the setTripTime dont remove or it will not be shown
   }, [pickupCoordinates, dropOffCoordinates]);
 
@@ -69,5 +67,3 @@ const WorkerPrice = tw.div``;
 const WorkerService = tw.div`font-medium`;
 
 const WorkerArriveTime = tw.div`text-xs text-emerald-500`;
-
-//console.log("test")
