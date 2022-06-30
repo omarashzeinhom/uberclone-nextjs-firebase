@@ -34,6 +34,8 @@ const Login = () => {
       <SignInButton onClick={() => signInWithPopup(auth, provider)}>
         Sign in with google
       </SignInButton>
+      <Signature>@Omar Zeinhom</Signature>
+
     </Wrapper>
   );
 };
@@ -51,3 +53,5 @@ const LoginBannerImage = tw.img`w-full h-40`;
 const LoginIcon = tw.img`h-12 w-12 rounded-full object-contain selfcenter`;
 
 const SignInButton = tw.button`bg-green-500 text-white text-center py-4 mt-8 selfcenter w-full `;
+
+const Signature = tw.div`text-center`;
