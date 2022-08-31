@@ -37,11 +37,39 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ### Pacakges installed 
 
 1. [Install Tailwind CSS with Next.js](https://tailwindcss.com/docs/guides/nextjs)
+
+- Add TailWind Css [Install Tailwind CSS with Next.js- TailWindCSS -Docs](https://tailwindcss.com/docs/guides/nextjs)
+ ```
+   //installs tailwind css using yarn
+   
+   npm install -D tailwindcss postcss autoprefixer
+   
+   // Generates tailwind.config.js postcss.config.js 
+   
+   npx tailwindcss init -p 
 ```
-npm install -D tailwindcss postcss autoprefixer
-
-npx tailwindcss init -p
-
+   
+- Add Content to /tailwind.config.js 
+```
+/** @type {import('tailwindcss').Config} */ 
+module.exports = {
+    //Add content to 
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+- Add tailwind directives inside  
+```
+//add to ./styles/globals.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 ```
 
 2. [tailwind-styled-components](https://www.npmjs.com/package/tailwind-styled-components)
