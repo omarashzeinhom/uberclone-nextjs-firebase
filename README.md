@@ -40,7 +40,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 - Add TailWind Css [Install Tailwind CSS with Next.js- TailWindCSS -Docs](https://tailwindcss.com/docs/guides/nextjs)
  ```
-   //installs tailwind css using yarn
+   //installs tailwind css using npm
    
    npm install -D tailwindcss postcss autoprefixer
    
