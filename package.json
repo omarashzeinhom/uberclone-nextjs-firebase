@@ -11,7 +11,7 @@
   "dependencies": {
     "firebase": "^9.8.4",
     "mapbox-gl": "^2.9.0",
-    "next": "12.1.6",
+    "next": "13.5.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
@@ -19,7 +19,7 @@
     "autoprefixer": "^10.4.7",
     "eslint": "8.18.0",
     "eslint-config-next": "12.1.6",
-    "postcss": "^8.4.14",
+    "postcss": "^8.4.31",
     "tailwind-styled-components": "^2.1.7",
     "tailwindcss": "^3.1.3"
   }
